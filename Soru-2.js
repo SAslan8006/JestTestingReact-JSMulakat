@@ -40,6 +40,10 @@ const intToRoman = (num) => {
         } else {
             res = str[i][0].repeat(tmp) + res;
         }
+        num = Math.floor(num / 10);
+        i++;
+
     };
+    return res;
 }
-console.log(intToRoman(123))
+console.log(intToRoman(23))

@@ -13,4 +13,22 @@ const longestCommonPrefix = function (strs) {
 
 }
 
-console.log(longestCommonPrefix(["react", "readux", "read"]))
+const longest = function (strs) {
+    if (strs.length == 0) { return "" };
+    var len1 = strs.length; //3
+    var len2 = strs[0].length//5
+    var tmp = "";
+    var res = "";
+    outer: for (var i = 0; i < len2; i++) {
+        tmp = strs[0][i];
+        inner: for (var j = 1; j < len1; j++) {
+            if (strs[j][i] !== tmp) {
+                break outer
+            }
+        }
+        res += tmp
+    }
+    return res
+}
+
+console.log(longest(["react", "reacdux", "reacd"]))

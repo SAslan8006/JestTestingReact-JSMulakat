@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 function App() {
+  // const name = "deneme"
   const [name, setName] = useState("deneme");
   useEffect(() => {
     setTimeout(() => {

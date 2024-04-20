@@ -1,13 +1,18 @@
 import { render, screen } from "@testing-library/react";
-import App from './App';
+import App from './App2';
 
-test("app.js testing", async () => {
+test("app.js test işlemleri", async () => {
   render(<App />);
+  // const element = screen.getByText('react testing')
+  // const element = screen.queryByText('react testing')
+  // const element = screen.findByText('react testing')
+  // const element = screen.queryByText('Mehmet')
+  // expect(element).not.toBeInTheDocument()
   const element = await screen.findByText('Mehmet')
-  expect(element).toBeInTheDocument();
+  expect(element).toBeInTheDocument()
 })
 
-
+// describe("Button testleri", () => {
 //   test('app.js test işlemleri', () => {
 //     render(<App />);
 //     // const element = screen.getByText('react testing')

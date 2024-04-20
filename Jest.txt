@@ -1,2 +1,6 @@
+test();
+it();
+ikisde aynıdır aynı işi görür teste başlamak için kullanılır...
+getByText, queryByText, findByText => inspecttt....
 Render,screen
 lt, test , describe 

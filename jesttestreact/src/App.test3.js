@@ -1,10 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import App from './App';
 
-test("app.js testing", async () => {
+test("app.js testing", () => {
   render(<App />);
-  const element = await screen.findByText('Mehmet')
-  expect(element).toBeInTheDocument();
+  const element = screen.getAllByText('testing')
+  // expect(element[0]).toBeInTheDocument();
+  expect(element).toHaveLength(2);
 })
 
 

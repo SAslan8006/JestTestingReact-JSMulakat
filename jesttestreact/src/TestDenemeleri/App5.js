@@ -3,8 +3,8 @@ function App() {
 
   return (
     <div className="App">
-      <div title="test">test</div>
-      <div title="test">test1</div>
+      <label htmlFor="a">React</label>
+      <input id="a" value={"test1"} />
     </div>
   );
 }

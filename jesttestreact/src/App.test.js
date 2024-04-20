@@ -1,9 +1,16 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import App from './App';
 
 test("app.js testing", async () => {
   render(<App />);
-  const element = await screen.findByText('Mehmet')
+  // const element = await screen.findByText('Mehmet')
+  // const element = screen.getByText('Mehmet')
+  let element
+  await waitFor(() => {
+    element = screen.getByText('Mehmet');
+  })
+
+
   expect(element).toBeInTheDocument();
 })
 

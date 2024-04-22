@@ -1,17 +1,19 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
 test("app.js testing", () => {
   render(<App />);
-  // const element = screen.getByTitle("test")
-  // expect(element).toBeInTheDocument();
-  // expect(element).toBeInTheDocument();
 
-  // const element = screen.getByRole("button")
+  // const element = screen.getByDisplayValue("testing")
   // expect(element).toBeInTheDocument();
 
-  const element = screen.getAllByRole("button")
-  // h1 yazılamaz bunlar heading diye geçer getByRoleleri
-  expect(element[0]).toBeInTheDocument();
+  // const element = screen.getByTestId("test")
+  // expect(element).toBeInTheDocument();
 
+  // const element = screen.getByText("Link")
+  // expect(element).toBeInTheDocument();
+  // const element = screen.getByText("Link")
+  // expect(element.href).toContain("http://");
+  const element = screen.getByAltText("image")
+  expect(element).toBeInTheDocument();
 })

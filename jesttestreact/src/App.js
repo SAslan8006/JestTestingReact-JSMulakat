@@ -3,10 +3,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div title="test">test</div>
-      <div title="test1">test</div> */}
-      <button>btn</button>
-      <button>btn1</button>
+      {/* <input data-testid="test" value={"testing"} /> */}
+      {/* <a href="http://www.google.com">Link</a>"" */}
+      <img src="" alt="image" />
     </div>
   );
 }

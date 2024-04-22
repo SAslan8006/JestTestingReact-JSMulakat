@@ -1,13 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import userEvent from '@testing-library/user-event';
 
-test("app.js testing", () => {
+test("app.js testing", async () => {
+  const user = userEvent.setup();
   render(<App />);
-  let obj = {
-    name: "Mehmet"
-  }
-  expect(obj.name).toBe("Mehmet")
-  expect(obj).toEqual({ name: "Mehmet" })
-  expect(2 + 2).toBe(4)
-
+  screen.debug();
+  await user.pointer({
+    keys: '[MouseLeft]',
+    target: screen.getByRole('button')
+  })
+  expect(screen.getByRole("heading")).toHaveTextContent(1)
 })
